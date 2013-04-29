@@ -2,7 +2,7 @@ $(document).ready(function($) {
 
     // set the scene size
     var WIDTH = window.innerWidth,
-      HEIGHT = window.innerHeight;
+        HEIGHT = window.innerHeight;
 
     // set some camera attributes
     var VIEW_ANGLE = 45, 
@@ -100,7 +100,7 @@ $(document).ready(function($) {
         renderer.render(scene, camera);
 
     }
-    document.getElementById("song").play();
+    //document.getElementById("song").play();
     animate();
 
 });

@@ -4,3 +4,4 @@ Inspired by this blog post: [http://ricardocabello.com/blog] (http://ricardocabe
 
 And with help getting started from here: [http://www.aerotwist.com/tutorials/getting-started-with-three-js/] (http://www.aerotwist.com/tutorials/getting-started-with-three-js/)
 
+To try it out, git clone the repository then open up index.html in Chrome or Firefox (haven't tested it elsewhere)
