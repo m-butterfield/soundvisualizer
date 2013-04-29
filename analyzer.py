@@ -1,3 +1,8 @@
+"""
+python file to analyize .wav files
+from http://ricardocabello.com/blog/post/677
+"""
+
 import math
 import struct
 import wave
