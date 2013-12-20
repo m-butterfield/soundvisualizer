@@ -5,7 +5,7 @@ $(document).ready(function($) {
         HEIGHT = window.innerHeight;
 
     // set some camera attributes
-    var VIEW_ANGLE = 45, 
+    var VIEW_ANGLE = 45,
         ASPECT = WIDTH / HEIGHT,
         NEAR = 0.1,
         FAR = 10000;
@@ -14,10 +14,9 @@ $(document).ready(function($) {
     var $body = $('#body');
 
     // create a WebGLrenderer, camera, and a scene
-    var renderer = new THREE.WebGLRenderer();
-    var camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
-
-    var scene = new THREE.Scene();
+    var renderer = new THREE.WebGLRenderer(),
+        camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+        scene = new THREE.Scene();
 
     // add the camera to the scene
     scene.add(camera);
@@ -26,7 +25,7 @@ $(document).ready(function($) {
     camera.position.z = 500;
 
     // start the renderer
-   renderer.setSize(WIDTH, HEIGHT);
+    renderer.setSize(WIDTH, HEIGHT);
 
     // attach the -supplied DOM element
     $body.append(renderer.domElement);
@@ -39,20 +38,18 @@ $(document).ready(function($) {
         rings = 20;
 
     // create a new mesh with sphere geometry
-    var sphere = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial);
-    
-    var drumSphere1 = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial);
-    var drumSphere2 = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial);
-    
-    var sphereFlangeL = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial);
-    var sphereFlangeR = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial);
-    
+    var sphere = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial),
+        drumSphere1 = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial),
+        drumSphere2 = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial),
+        sphereFlangeL = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial),
+        sphereFlangeR = new THREE.Mesh(new THREE.SphereGeometry(radius, segments, rings), sphereMaterial);
+
     drumSphere1.position.x = 100;
     drumSphere2.position.x = -100;
-    
+
     sphereFlangeL.position.x = -250;
     sphereFlangeR.position.x = 250;
-    
+
     // create a point light
     var pointLight = new THREE.PointLight(0xFFFFFF);
 
